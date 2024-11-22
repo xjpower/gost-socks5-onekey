@@ -201,7 +201,7 @@ function data_processing(){
 				clear_install
 				exit 1
 			fi
-			gost_version="$(wget -qO- "https://github.com/ginuerzh/gost/tags"|grep "/gost/releases/tag/"|head -n 1|awk -F "/tag/" '{print $2}'|sed 's/\">//'|sed 's/v//g')"
+			gost_version="2.11.5"
 			wget "https://github.com/ginuerzh/gost/releases/download/v${gost_version}/gost_${gost_version}_linux_${System_Bit}.tar.gz"
 			tar -zxvf "gost_${gost_version}_linux_${System_Bit}.tar.gz"
 			mv "gost_${gost_version}_linux_${System_Bit}/gost" "./gost"
